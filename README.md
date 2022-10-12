@@ -52,7 +52,16 @@ module.exports = {
 <br/>
 <br/>
 
-### 4. Start Your Local Redis Server
+### 4. Create Your Local Database
+<br/><br/>     In a local PostgreSQL client such as [PGAdmin](https://www.postgresql.org/download/) or [Beekeeper Studio](https://www.beekeeperstudio.io/), create a new database and name it `schools-out`.
+
+<br/>
+
+***
+<br/>
+<br/>
+
+### 5. Start Your Local Redis Server
 <br/>     *Windows Installation Instructions:* 	[Redis for Windows](https://redis.io/docs/getting-started/installation/install-redis-on-windows/)
 <br/>     *MacOS Installation Instructions:* 	[Redis for MacOS](https://redis.io/docs/getting-started/installation/install-redis-on-mac-os/)
 <br/>
@@ -70,7 +79,7 @@ brew services start redis
 <br/>
 <br/>
 
-### 5. Start the Server
+### 6. Start the Backend Server
 ```bash
 sails lift --redis
 ```
@@ -80,5 +89,5 @@ sails lift --redis
 <br/>
 <br/>
 
-### 4. Server is live and running at  http://localhost:1337
+### 7. Server is live and running at  http://localhost:1337
 
