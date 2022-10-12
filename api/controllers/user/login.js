@@ -52,6 +52,7 @@ and exposed as \`req.me\`.)`,
   },
 
   fn: async function ({ email, password }) {
+
     const userRecord = await User.findOne({
       email: email.toLowerCase(),
     });

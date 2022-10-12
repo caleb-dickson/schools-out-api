@@ -92,8 +92,16 @@ module.exports = {
     // Store the user's new id in their session.
     this.req.session.userId = newUserRecord.id;
 
-    sails.log(this.req.session);
+    let sanitizedUser = _.extend({}, newUserRecord);
+    sails.helpers.redactUser(sanitizedUser);
 
-    return newUserRecord;
+    if (sanitizedUser.password) {
+      sails.log.warn(
+        "The logged in user record has a `password` property, but it was still there after pruning off all properties that match `protect: true` attributes in the User model.  So, just to be safe, removing the `password` property anyway..."
+      );
+      delete sanitizedUser.password;
+    } //ﬁ
+
+    return sanitizedUser;
   },
 };

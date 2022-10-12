@@ -8,7 +8,6 @@ module.exports = {
   exits: {},
 
   fn: async function () {
-    // All done.
-    return;
+    return { message: "Server is up and running!" };
   },
 };

@@ -21,6 +21,9 @@ module.exports = {
   },
 
   fn: async function () {
+
+    sails.log(this.req.session);
+
     // Clear the `userId` property from this session.
     delete this.req.session.userId;
 

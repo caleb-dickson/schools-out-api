@@ -9,14 +9,16 @@
  */
 
 module.exports.policies = {
-
   /***************************************************************************
-  *                                                                          *
-  * Default policy for all controllers and actions, unless overridden.       *
-  * (`true` allows public access)                                            *
-  *                                                                          *
-  ***************************************************************************/
+   *                                                                          *
+   * Default policy for all controllers and actions, unless overridden.       *
+   * (`true` allows public access)                                            *
+   *                                                                          *
+   ***************************************************************************/
+  "*": "is-authenticated", // Require user to be authenticated/logged in to access any action not otherwise mapped in this config
 
-  // '*': true,
+  "user/health": true, // Always allow access to the server health check action, and so on...
+  "user/signup": true,
+  "user/login": true,
 
 };
