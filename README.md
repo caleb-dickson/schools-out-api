@@ -1,26 +1,65 @@
-# schools-out-api
+# School's Out! - API Documentation
 
-a [Sails v1](https://sailsjs.com) application
+## \# Getting Started
+<br/>
 
+### 1. Clone this repo
+<br/>     *In your terminal, in the parent directory of your desired location*
+```bash
+git clone https://github.com/tacDev-io/schools-out-api.git schools-out-api
+```
+<br/>
+<br/>
 
-### Links
+***
+<br/>
+<br/>
 
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
+### 2. Install Dependencies
+<br/>     *Navigate into the newly created directory*
+```bash
+cd ./schools-out-api
+```
+<br/>     *Then enter:*
+```bash
+npm install
+```
+<br/>
+<br/>
 
+***
+<br/>
+<br/>
 
-### Version info
+### 3. Start Your Local Redis Server
+<br/>     *Windows Installation Instructions:* 	[Redis for Windows](https://redis.io/docs/getting-started/installation/install-redis-on-windows/)
+<br/>     *MacOS Installation Instructions:* 	[Redis for MacOS](https://redis.io/docs/getting-started/installation/install-redis-on-mac-os/)
+<br/>
+<br/>     *On Windows*
+```bash
+sudo service redis-server start
+```
+<br/>     *On Mac*
+```bash
+brew services start redis
+```
+<br/>
+<br/>
 
-This app was originally generated on Tue Oct 11 2022 15:25:36 GMT-0400 (Eastern Daylight Time) using Sails v1.5.2.
+***
+<br/>
+<br/>
 
-<!-- Internally, Sails used [`sails-generate@2.0.6`](https://github.com/balderdashy/sails-generate/tree/v2.0.6/lib/core-generators/new). -->
+### 4. Start the Server
+```bash
+sails lift --redis
+```
+<br/>
+<br/>
 
+***
+<br/>
+<br/>
 
-
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
+### 4. Server is live and running at  http://localhost:1337
 

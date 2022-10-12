@@ -17,7 +17,7 @@ module.exports = {
       type: "string",
     },
     phoneNumber: {
-      type: "number",
+      type: "string",
     },
     email: {
       type: "string",
