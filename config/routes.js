@@ -25,7 +25,9 @@ module.exports.routes = {
   //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
 
   "GET /ping": { controller: "user/UserController", action: "healthCheck" },
-  "POST /signup": { controller: "user/UserController", action: "signup" }
+  "POST /signup": { controller: "user/UserController", action: "signup" },
+  "POST /login": { controller: "user/UserController", action: "login" },
+  "GET /logout": { controller: "user/UserController", action: "logout" },
 
   /***************************************************************************
    *                                                                          *

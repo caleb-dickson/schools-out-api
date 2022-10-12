@@ -92,6 +92,8 @@ module.exports = {
     // Store the user's new id in their session.
     this.req.session.userId = newUserRecord.id;
 
+    sails.log(this.req.session);
+
     return newUserRecord;
   },
 };

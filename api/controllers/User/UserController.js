@@ -1,5 +1,7 @@
 const health = require("./action/health");
+const login = require("./action/login");
 const signup = require("./action/signup");
+const logout = require("./action/logout");
 
 /**
  * UserController
@@ -9,6 +11,8 @@ const signup = require("./action/signup");
  */
 module.exports = {
   healthCheck: health,
-  signup: signup
+  signup: signup,
+  login: login,
+  logout: logout
 };
 
