@@ -9,7 +9,6 @@
 git clone https://github.com/tacDev-io/schools-out-api.git schools-out-api
 ```
 <br/>
-<br/>
 
 ***
 <br/>
@@ -25,13 +24,35 @@ cd ./schools-out-api
 npm install
 ```
 <br/>
+
+***
+<br/>
+<br/>
+
+### 3. Create Environment Variables
+Certain environment variables are specific to each development environment and not included in this repo. You'll want to create your own.
+<br/><br/>     In the project root directory, in the `Config` directory, create a new file, and name it `local.js`.
+<br/><br/>
+### Enter the following code, replacing the values with your own.
+
+```javascript
+module.exports = {
+
+  env: {
+    POSTGRES_USERNAME: "username",
+    POSTGRES_PW: "password",
+    JWT_KEY: 'ASDdasASDasdASdaSDasDSDASd'
+  }
+
+};
+```
 <br/>
 
 ***
 <br/>
 <br/>
 
-### 3. Start Your Local Redis Server
+### 4. Start Your Local Redis Server
 <br/>     *Windows Installation Instructions:* 	[Redis for Windows](https://redis.io/docs/getting-started/installation/install-redis-on-windows/)
 <br/>     *MacOS Installation Instructions:* 	[Redis for MacOS](https://redis.io/docs/getting-started/installation/install-redis-on-mac-os/)
 <br/>
@@ -44,17 +65,15 @@ sudo service redis-server start
 brew services start redis
 ```
 <br/>
-<br/>
 
 ***
 <br/>
 <br/>
 
-### 4. Start the Server
+### 5. Start the Server
 ```bash
 sails lift --redis
 ```
-<br/>
 <br/>
 
 ***

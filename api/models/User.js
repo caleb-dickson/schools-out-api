@@ -12,12 +12,15 @@ module.exports = {
     },
     firstName: {
       type: "string",
+      required: true,
     },
     lastName: {
       type: "string",
+      required: true,
     },
     phoneNumber: {
       type: "string",
+      required: true,
     },
     email: {
       type: "string",
@@ -31,8 +34,7 @@ module.exports = {
       required: true,
     },
     token: {
-      type: "string",
-      required: true,
+      type: "string" // FIXME: required: true
     },
     role: {
       type: "string",

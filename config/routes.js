@@ -8,6 +8,8 @@
  * https://sailsjs.com/anatomy/config/routes-js
  */
 
+const UserController = require("../api/controllers/User/UserController");
+
 module.exports.routes = {
   /***************************************************************************
    *                                                                          *
@@ -18,7 +20,12 @@ module.exports.routes = {
    *                                                                          *
    ***************************************************************************/
 
+  //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
+  //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
+  //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
+
   "GET /ping": { controller: "user/UserController", action: "healthCheck" },
+  "POST /signup": { controller: "user/UserController", action: "signup" }
 
   /***************************************************************************
    *                                                                          *
