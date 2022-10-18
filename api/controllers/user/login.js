@@ -55,6 +55,7 @@ and exposed as \`req.me\`.)`,
 
     const userRecord = await User.findOne({
       email: email.toLowerCase(),
+      deleted: false
     });
     if (!userRecord) {
       throw "badCombo";

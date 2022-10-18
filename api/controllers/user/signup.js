@@ -73,7 +73,7 @@ module.exports = {
     password,
     role,
   }) {
-    let newEmailAddress = email.toLowerCase();
+    const newEmailAddress = email.toLowerCase();
 
     // Build up data for the new user record and save it to the database.
     // (Also use `fetch` to retrieve the new ID so that we can use it below.)
@@ -100,7 +100,7 @@ module.exports = {
         "The logged in user record has a `password` property, but it was still there after pruning off all properties that match `protect: true` attributes in the User model.  So, just to be safe, removing the `password` property anyway..."
       );
       delete sanitizedUser.password;
-    } //ﬁ
+    }
 
     return sanitizedUser;
   },

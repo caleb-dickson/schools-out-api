@@ -21,4 +21,14 @@ module.exports.policies = {
   "user/signup": true,
   "user/login": true,
 
+  "campus/create-one": "is-admin",
+  "campus/update-one": "is-admin",
+  "campus/delete-one": "is-admin",
+
+  "student/create-one": "is-faculty",
+  "student/create-many": "is-faculty",
+  /* GET Student also has checks to ensure only Guardians in the same Car may receieve Student data. */
+  "student/update-one": "is-faculty",
+  "student/delete-one": "is-faculty",
+
 };

@@ -35,7 +35,7 @@ module.exports = {
       protect: true
     },
     token: {
-      type: "string", // FIXME: required: true
+      type: "string", // For driver authentication on pickup - FIXME: required: true
     },
     role: {
       type: "string",

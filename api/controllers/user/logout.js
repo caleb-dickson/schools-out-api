@@ -21,11 +21,15 @@ module.exports = {
   },
 
   fn: async function () {
-
     sails.log(this.req.session);
 
     // Clear the `userId` property from this session.
     delete this.req.session.userId;
+
+    // Broadcast a message that we can display in other open tabs.
+    if (sails.hooks.sockets) {
+      await sails.helpers.broadcastSessionChange(this.req);
+    }
 
     if (!this.req.wantsJSON) {
       throw { redirect: "/login" };

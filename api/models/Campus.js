@@ -19,6 +19,7 @@ module.exports = {
 
     admin: {
       model: "user",
+      required: true
     },
     users: {
       collection: "user",
